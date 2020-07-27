@@ -35,6 +35,11 @@ import WinterHat1 from './WinterHat1'
 import WinterHat2 from './WinterHat2'
 import WinterHat3 from './WinterHat3'
 import WinterHat4 from './WinterHat4'
+
+import SapBaseballCap from './SapBaseballCap'
+import SapCowboyHat from './SapCowboyHat'
+import SapToque from './SapToque'
+
 import { Selector, TopOption } from '../../options'
 
 export default class Top extends React.Component {
@@ -42,6 +47,10 @@ export default class Top extends React.Component {
     const { children } = this.props
     return (
       <Selector defaultOption={LongHairStraight} option={TopOption}>
+        <SapBaseballCap>{children}</SapBaseballCap>
+        <SapCowboyHat>{children}</SapCowboyHat>
+        <SapToque>{children}</SapToque>
+
         <NoHair>{children}</NoHair>
         <Eyepatch>{children}</Eyepatch>
         <Hat>{children}</Hat>
