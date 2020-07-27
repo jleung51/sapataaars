@@ -6,11 +6,16 @@ import CollarSweater from './CollarSweater'
 import GraphicShirt from './GraphicShirt'
 import Hoodie from './Hoodie'
 import Overall from './Overall'
-import SapIxpBlazer from './SapIxpBlazer'
 import ShirtCrewNeck from './ShirtCrewNeck'
 import ShirtScoopNeck from './ShirtScoopNeck'
 import ShirtVNeck from './ShirtVNeck'
 import { ClotheOption, Selector } from '../../options'
+
+// Custom SAP clothing
+import SapIxpBlazer from './SapIxpBlazer';
+import SapBestRunHoodie from './SapBestRunHoodie';
+import SapCrewneckShirt from './SapCrewneckShirt';
+import SapVneckShirt from './SapVneckShirt';
 
 export default class Clothes extends React.Component {
   render () {
@@ -22,10 +27,14 @@ export default class Clothes extends React.Component {
         <GraphicShirt />
         <Hoodie />
         <Overall />
-        <SapIxpBlazer />
         <ShirtCrewNeck />
         <ShirtScoopNeck />
         <ShirtVNeck />
+
+        <SapIxpBlazer />
+        <SapBestRunHoodie />
+        <SapCrewneckShirt />
+        <SapVneckShirt />
       </Selector>
     )
   }
