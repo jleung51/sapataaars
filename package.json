@@ -4,16 +4,13 @@
   "description": "React component for avataaars, with SAP additions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": [
-    "react",
-    "avatar"
-  ],
+  "keywords": ["react", "avatar"],
   "repository": "git@github.com:jleung51/sapataaars.git",
   "author": "Jeffrey Leung",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "tsc && webpack --watch",
+    "build": "tsc && webpack"
   },
   "peerDependencies": {
     "react": "^16.0.0"
