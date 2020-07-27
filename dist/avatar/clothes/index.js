@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -20,6 +20,7 @@ var CollarSweater_1 = require("./CollarSweater");
 var GraphicShirt_1 = require("./GraphicShirt");
 var Hoodie_1 = require("./Hoodie");
 var Overall_1 = require("./Overall");
+var SapIxpBlazer_1 = require("./SapIxpBlazer");
 var ShirtCrewNeck_1 = require("./ShirtCrewNeck");
 var ShirtScoopNeck_1 = require("./ShirtScoopNeck");
 var ShirtVNeck_1 = require("./ShirtVNeck");
@@ -37,6 +38,7 @@ var Clothes = /** @class */ (function (_super) {
             React.createElement(GraphicShirt_1.default, null),
             React.createElement(Hoodie_1.default, null),
             React.createElement(Overall_1.default, null),
+            React.createElement(SapIxpBlazer_1.default, null),
             React.createElement(ShirtCrewNeck_1.default, null),
             React.createElement(ShirtScoopNeck_1.default, null),
             React.createElement(ShirtVNeck_1.default, null)));

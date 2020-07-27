@@ -4,24 +4,39 @@
   "description": "React component for avataaars, with SAP additions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": ["react", "avatar"],
+  "keywords": [
+    "react",
+    "avatar"
+  ],
   "repository": "git@github.com:jleung51/sapataaars.git",
-  "author": "Jeffrey Leung <jleung513@gmail.com>",
+  "author": "Jeffrey Leung",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
   "peerDependencies": {
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
     "@types/react": "^16.0.25",
     "import-sort-style-renke": "^4.2.0",
     "tslint": "^5.8.0",
     "tslint-config-standard": "^7.0.0",
     "tslint-react": "^3.2.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "babel-loader": "^8.1.0",
     "lodash": ">=4.17.11",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "webpack": "^4.44.0",
+    "react": "^16.0.0"
   },
   "importSort": {
     ".js, .jsx, .es6, .es": {

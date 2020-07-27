@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bear = exports.Resist = exports.Pizza = exports.Selena = exports.Hola = exports.Diamond = exports.Deer = exports.Cumbia = exports.Bat = exports.SkullOutline = exports.Skull = void 0;
 var React = require("react");
 var lodash_1 = require("lodash");
 var options_1 = require("../../options");

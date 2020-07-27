@@ -79,6 +79,9 @@ export default class Selector extends React.Component<Props> {
       // TODO: also validate and throw error if we don't see optionValue
       child => getComponentOptionValue((child as any).type)
     )
+    if (!values) {
+      throw new Error('Empty value')
+    }
     if (new Set(values).size !== values.length) {
       throw new Error('Duplicate values')
     }
