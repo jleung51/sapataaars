@@ -1,13 +1,13 @@
 # React component for Avataaars
 
-The core React component for [Avataaars Generator](https://getavataaars.com/) developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). 
+The core React component for [Avataaars Generator](https://getavataaars.com/) developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley).
 
 <p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
 
 ## Features
 
  - SVG based
- - Light weight 
+ - Light weight
  - Scalable
  - Easy to use
  - Easy to integrate with custom editor
@@ -35,7 +35,7 @@ import Avatar from 'avataaars'
 
 export default class MyComponent extends React.Component {
   render () {
-    return 
+    return
       <div>
         Your avatar:
         <Avatar
@@ -65,7 +65,7 @@ import {Piece} from 'avataaars';
 
 export default class MyComponent extends React.Component {
   render () {
-    return 
+    return
       <div>
         <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
         <Piece pieceType="eyes" pieceSize="100" eyeType="Dizzy"/>
@@ -86,3 +86,12 @@ To explore avatar options and generate the React code, please use [Avataaars Gen
 ## Collect options
 
 To build your own avatar editor, you may want to use lower level `Avatar` component along with `OptionContext`. For more details usage, please reference to source code of [avataaars-generator](https://github.com/fangpenlin/avataaars-geneator), see how it uses `OptionContext` to collection available options.
+
+
+## Building the Component for Release on NPM
+
+```shell
+npm install
+npm run build
+npm publish
+```
