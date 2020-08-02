@@ -1,37 +1,50 @@
-# React component for Avataaars
+# SAPataaars: Avataaars with an SAP Twist
 
-The core React component for [Avataaars Generator](https://getavataaars.com/) developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley).
+React component derived from the [Avataaars package](https://github.com/fangpenlin/avataaars). Built on TypeScript, bundled with Webpack, and published on NPM.
 
-<p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
+This modification of [Avataaars 1.2.1](https://www.npmjs.com/package/avataaars/v/1.2.1) includes new SAP-branded clothing and hat options.
 
-## Features
+<p align="center"><img src='sapataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
 
- - SVG based
- - Light weight
- - Scalable
- - Easy to use
- - Easy to integrate with custom editor
- - Comes with [official editor](https://getavataaars.com/)
+**Install** this package from NPM [here](https://www.npmjs.com/package/sapataaars).
+
+___
+
+## SAP Clothing and Hats
+
+The available clothes are:
+* SapBestRunHoodie
+* SapCrewneckShirt
+* SapIxpBlazer
+
+The available tops (hats) are:
+* SapBaseballCap
+* SapCowboyHat
+* SapToque
+
+All other avatar customizations from [Avataaars 1.2.1](https://www.npmjs.com/package/avataaars/v/1.2.1) are also available. To explore non-SAPataaar options, see [Avataaars Generator](https://getavataaars.com/).
+
+## Credits
+
+The original [Avataaars Generator](https://getavataaars.com/) is developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), and was based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley).
 
 ## Usage
 
-First, you need to install the avataaars component package, here you run
+A working React project is required as a base.
 
+Install the package:
+```shell
+yarn add sapataaars
+
+// or
+
+npm install sapataaars --save
 ```
-yarn add avataaars
-```
 
-or
-
-```
-npm install avataaars --save
-```
-
-if you are using npm. Then, in your React app, import the Avataaar component and put it where you like it to be, for example
-
+In the React project, import the SAPataaar component with the preferred character customization:
 ```jsx
 import * as React from 'react'
-import Avatar from 'avataaars'
+import Avatar from 'sapataaars'
 
 export default class MyComponent extends React.Component {
   render () {
@@ -41,11 +54,11 @@ export default class MyComponent extends React.Component {
         <Avatar
           style={{width: '100px', height: '100px'}}
           avatarStyle='Circle'
-          topType='LongHairMiaWallace'
+          topType='SapBaseballCap'
           accessoriesType='Prescription02'
           hairColor='BrownDark'
           facialHairType='Blank'
-          clotheType='Hoodie'
+          clotheType='SapBestRunHoodie'
           clotheColor='PastelBlue'
           eyeType='Happy'
           eyebrowType='Default'
@@ -57,41 +70,23 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-To showcase individual pieces of the avatar you can use the Piece component, for example:
+## Building the Component for NPM Release
 
-```jsx
-import * as React from 'react'
-import {Piece} from 'avataaars';
+TypeScript and Webpack are both required to build the component.
 
-export default class MyComponent extends React.Component {
-  render () {
-    return
-      <div>
-        <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-        <Piece pieceType="eyes" pieceSize="100" eyeType="Dizzy"/>
-        <Piece pieceType="eyebrows" pieceSize="100" eyebrowType="RaisedExcited"/>
-        <Piece pieceType="accessories" pieceSize="100" accessoriesType="Round"/>
-        <Piece pieceType="top" pieceSize="100" topType="LongHairFro" hairColor="Red"/>
-        <Piece pieceType="facialHair" pieceSize="100" facialHairType="BeardMajestic"/>
-        <Piece pieceType="clothe" pieceSize="100" clotheType="Hoodie" clotheColor="Red"/>
-        <Piece pieceType="graphics" pieceSize="100" graphicType="Skull" />
-        <Piece pieceType="skin" pieceSize="100" skinColor="Brown" />
-      </div>
-  }
-}
-```
-
-To explore avatar options and generate the React code, please use [Avataaars Generator](https://getavataaars.com/)
-
-## Collect options
-
-To build your own avatar editor, you may want to use lower level `Avatar` component along with `OptionContext`. For more details usage, please reference to source code of [avataaars-generator](https://github.com/fangpenlin/avataaars-geneator), see how it uses `OptionContext` to collection available options.
-
-
-## Building the Component for Release on NPM
-
+Install all dependencies:
 ```shell
 npm install
+```
+
+Update `package.json` with the version number to publish, and optionally create a [Git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for tracking.
+
+Create the package to publish:
+```shell
 npm run build
+```
+
+Finally, publish the package to NPM:
+```shell
 npm publish
 ```
