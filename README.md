@@ -1,5 +1,7 @@
 # SAPataaars: Avataaars with an SAP Twist
 
+![Licence: MIT](https://img.shields.io/github/license/jleung51/sapataaars)
+
 React component derived from the [Avataaars package](https://github.com/fangpenlin/avataaars). Built on TypeScript, bundled with Webpack, and published on NPM.
 
 This modification of [Avataaars 1.2.1](https://www.npmjs.com/package/avataaars/v/1.2.1) includes new SAP-branded clothing and hat options.
